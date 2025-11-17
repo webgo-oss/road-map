@@ -61,7 +61,7 @@
         trigger: ".hero-section",
         start: "top top",
         end: "300% top",
-        scrub: 3,
+        scrub: 2,
         pin: true,
       }
     });
