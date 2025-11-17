@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account / Log In</title>
+<link rel="stylesheet" href="./css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+          <video autoplay loop muted class="video-background">
+                <source src="./videos/v2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+           <div class="logo">AMU</div>
+
+            <div class="content">
+                <h1>Capturing Moments, Creating Memories</h1>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="form-header">
+                <h2 id="form-title">Create an account</h2>
+                <p id="form-subtitle">Already have an account? <a href="#" class="state-link" onclick="toggleFormState('login'); return false;">Log in</a></p>
+            </div>
+            
+            <div id="register-view">
+                <form id="register-form">
+                    <input type="text" placeholder="Full Name" name="fullName">
+                    
+                    <input type="email" placeholder="Email" name="email">
+                    
+                    <div class="password-field">
+                        <input type="password" placeholder="Enter your password" name="password">
+                        <span class="eye-icon" onclick="togglePasswordVisibility(this)"><i class="bi bi-eye"></i></span> 
+                    </div>
+
+                    <button type="button" class="create-account-btn" onclick="window.location.href='landing.html'">Create account</button>
+                </form>
+            </div>
+
+            <div id="login-view" class="hidden">
+                <form id="login-form">
+                    <input type="email" placeholder="Email" name="email">
+                    
+                    <div class="password-field">
+                        <input type="password" placeholder="Enter your password" name="password">
+                        <span class="eye-icon" onclick="togglePasswordVisibility(this)"><i class="bi bi-eye"></i></span> 
+                    </div>
+
+                    <button type="button" class="create-account-btn" onclick="window.location.href='landing.html'">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<script src="./js/auth.js"></script>
+</body>
+</html>
