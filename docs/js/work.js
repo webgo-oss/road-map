@@ -38,7 +38,7 @@
   const loader = new GLTFLoader();
   loader.setMeshoptDecoder(MeshoptDecoder);
 
-  loader.load('../models/robot_girl_with_hair_wires-v1.glb', (gltf) => {
+  loader.load('./models/robot_girl_with_hair_wires-v1.glb', (gltf) => {
     model = gltf.scene;
     model.scale.set(1.2, 1.2, 1.2);
     model.position.set(-0.8, -2, 0);
