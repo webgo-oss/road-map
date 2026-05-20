@@ -1,0 +1,238 @@
+/* ================== FONTS ================== */
+@font-face { font-family: font; src: url('../fonts/Tanker-Regular.otf'); }
+@font-face { font-family: font2; src: url('../fonts/Melodrama-Variable.ttf'); font-weight: 700; }
+
+/* ================== RESET ================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ================== BODY ================== */
+body { background: #0e0f13; font-family: "Helvetica Neue", Arial, sans-serif; color: #b8c6ff; }
+
+/* =========================================================
+   SECTION 1 — IN.SIDE HERO
+========================================================= */
+.page { min-height: 100vh; padding: 60px 50px; display: flex; align-items: center; }
+.content { width: 100%; display: grid; grid-template-columns: 300px 1fr; align-items: center; column-gap: 50px; }
+
+.left { font-size: 14px; display: flex; flex-direction: column; margin-top: -150px; }
+.arrow { font-size: 70px; margin-bottom: 45px; color: #9aa8ff; }
+.left h4 { font-size: 20px; margin-bottom: 16px; color: #d6dcff; font-family: font; letter-spacing: 2px; }
+.left p { color: #9fa6c7; line-height: 1.7; max-width: 260px; font-size: 15px; margin-bottom: 32px; font-family: font2; }
+.left a { text-decoration: none; color: #aebaff; margin-bottom: 12px; }
+.left a:hover { color: #ffffff; }
+
+.center { display: flex; flex-direction: column; align-items: flex-end; }
+.center h1 { font-size: 180px; font-weight: 500; letter-spacing: -5px; margin-bottom: 40px; color: #e4e8ff; font-family: font; }
+.center span { font-size: 34px; margin-left: 6px; color: #9aa8ff; }
+.center-img { width: 57%; max-width: 580px; filter: brightness(0.95) contrast(1.05); }
+.center-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.center-img p {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #b5c7ff;
+}
+
+.center-img small {
+  font-size: 12px;
+  color: #7f8cff;
+}
+
+/* =========================================================
+   SECTION 2 — HOW IT WORKS (NEON FLOW)
+========================================================= */
+.how-section { min-height: 100vh; padding: 80px 60px; background: #0e0f13; display: flex; align-items: center; }
+.wrapper { width: 100%; display: flex; gap: 40px; }
+.graph { flex: 2; height: 520px; }
+#chart { width: 100%; height: 100%; }
+.text { flex: 1; display: flex; align-items: center; }
+.text h1 { font-size: 4rem; font-weight: 800; letter-spacing: 2px; color: #ffffff;font-family: font; }
+.text span { display: block; font-size: 1.15rem; margin-top: 20px; color: #b5c7ff; max-width: 420px; font-family: font2;}
+
+/* =========================================================
+   SECTION 3 — FEATURES (SANKEY)
+========================================================= */
+.features-section { min-height: 100vh; background: #0e0f13; position: relative; padding: 80px 60px; }
+.page-title { position: absolute; top: 36px; left: 50%; transform: translateX(-50%); font-size: 42px; letter-spacing: 4px; font-family: font; z-index: 10; }
+#treeChart {
+  width: 100%;
+  height: 600px;
+}
+
+/* =========================================================
+   SECTION — 3D FEATURE BARS
+========================================================= */
+.bars-section {
+  padding: 80px 60px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background: #0e0f13;
+}
+
+.bars-left {
+  flex: 2;
+}
+
+.bars-right {
+  flex: 1;
+}
+
+#timeChart {
+  width: 100%;
+  height: 520px;
+}
+
+/* RIGHT PANEL */
+.side-title {
+  font-size: 22px;
+
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+
+}
+
+.feature-card {
+  background:#0e0f13;
+  border-left: 4px solid;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+
+.feature-card h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #eaffff;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #bfefff;
+}
+
+/* Accent colors */
+.pink { border-color: #ff4dff; }
+.cyan { border-color: #4dffff; }
+.yellow { border-color: #ffcc4d; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bars-section {
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   SECTION 4 — ARCHITECTURAL HORIZONTAL CARD + VIDEO
+========================================================= */
+.card-container { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+
+.card { 
+  background: #0e0f13; 
+  padding: 56px; 
+  position: relative; 
+  min-height: 360px; 
+  margin-bottom: 16px; 
+  border: 1px solid white; 
+  color: #eaffff;
+}
+.card .arrow { position: absolute; top: 28px; right: 36px; font-size: 64px; font-weight: 700; line-height: 1;  }
+.card .right {
+  margin-left: auto;
+  max-width: 520px;
+  text-align: right;
+}
+.card .name { font-size: 30px; font-weight: 600; letter-spacing: 2px; margin-bottom: 10px;font-family: font; margin-top: 10%;}
+.card .base-sub { font-size: 14px; letter-spacing: 0.4px; margin-bottom: 22px; color: #9fa6c7; font-family: font;}
+/* .card .desc { ;height: auto; } */
+.card .desc {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 17px; line-height: 1.9; color: #b5c7ff;font-family: font2;
+
+}
+.loading-container{
+  text-align:center;
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.loading-container h1{
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color:#fff; /* if background dark */
+}
+
+.loading-container .bar{
+  width: 100%;
+  height: 70px;
+  border: 5px solid #fff;
+  border-radius: 25px;
+  padding: 10px;
+  position: relative;
+  background: transparent;
+}
+
+.loading-container .fill{
+  height: 100%;
+  width: 0%;
+  background: #fff;
+  border-radius: 18px;
+  transition: width 0.2s ease;
+  position: relative;
+}
+
+.loading-container .percent{
+  position:absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#111;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+/* BASE CARD */
+.base-card { background:#0e0f13; padding: 38px 56px; display: flex; align-items: center; margin-bottom: 16px; border: 1px solid white;border-radius: 10px; display: flex;
+justify-content: space-between;}
+.base-card button{
+  padding: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  background-color: #e4e8ff;
+}
+.base-logo { font-size: 100px; font-weight: 700; letter-spacing: -2px; line-height: 1; font-family: font;letter-spacing: 3px;}
+
+/* VIDEO CARD */
+.video-card { background: #0e0f13; margin-bottom: 40px; padding: 0; border: 1px solid white; }
+.video-card video { width: 100%; height: 420px; object-fit: cover; display: block; filter: brightness(1) contrast(1.05); }
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 900px) {
+  .content { grid-template-columns: 1fr; text-align: center; }
+  .left { margin-top: 0; }
+  .center { align-items: center; }
+  .wrapper { flex-direction: column; }
+  .card { padding: 36px; min-height: auto; }
+  .card .arrow { font-size: 48px; top: 20px; right: 24px; }
+  .card .right { position: static; margin-top: 100px; text-align: left; max-width: 100%; }
+  .base-card { padding: 32px; }
+  .base-logo { font-size: 48px; }
+  .video-card video { height: 260px; }
+}

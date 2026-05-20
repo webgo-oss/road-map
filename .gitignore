@@ -1,0 +1,12 @@
+.env
+node_modules
+__pycache__
+media
+venv
+pdfs
+uploads
+video_api
+a.gif
+gif2.gif
+docs
+ggml-nomic-ai-gpt4all-falcon-Q4_0.gguf

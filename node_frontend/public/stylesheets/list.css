@@ -1,0 +1,155 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+@font-face {
+  font-family: font;
+  src: url('../fonts/Tanker-Regular.otf');
+}
+
+/* Page */
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #000;              /* BLACK BACKGROUND */
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Top Info Bar */
+.info {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding: 40px 60px;
+}
+
+.info h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #b8c6ff;
+  
+}
+
+/* Card Scroll Area */
+.card-container {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding: 40px 60px;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.sub-cards {
+  flex: 0 0 280px;
+  min-height: 480px;
+  background: #0f1220;           /* DARK CARD */
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid #b8c6ff;
+  box-shadow: 0 10px 30px rgba(184, 198, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sub-cards:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 11px 40px rgba(184, 198, 255, 0.45);
+}
+
+/* Card Number */
+.sub-cards span {
+  font-size:3rem;
+  font-weight: 700;
+  color: #fff;
+    font-family: font;
+  margin-bottom: 15px;
+}
+.sub-cards .line{
+  width: 40%;
+  height: 2px;
+  background-color: white;
+}
+
+/* Card Title */
+.sub-cards h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+
+}
+
+/* Learn More */
+.learn-more-btn {
+  font-size: 15px;
+  cursor: pointer;
+  color: #b8c6ff;
+  font-weight: 500;
+}
+
+.learn-more-btn:hover {
+  text-decoration: underline;
+}
+
+.color-boxs{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+/* Video Links */
+.video-links {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.video-links a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.video-links a:hover {
+  color: #b8c6ff;
+  text-decoration: underline;
+}
+
+/* Status Message */
+#statusMsg {
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  color: #6c7bff;
+}
+#download{
+font-size: 20px;
+padding: 4px;
+width: 150px;
+border-radius: 10px;
+background-color: transparent;
+border: 1px solid rgb(255, 255, 255,0.5);
+color:  rgb(255, 255, 255,0.5);
+}
+#download:hover{
+  background-color:  rgb(255, 255, 255,0.5);
+  color: #000;
+}
+.line{
+  display: flex;
+  justify-content: space-around;
+}

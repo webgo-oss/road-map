@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Roadmap Topics + YouTube Links</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="stylesheet" href="../stylesheets/list.css">
+<link rel="stylesheet" href="../stylesheets/navicon.css">
+</head>
+<body>
+  <div id="dashboard-fab">
+  <a href="/dashboard" class="fab-btn">
+<img 
+  src="<%= user.profile_pic ? '/uploads/' + user.profile_pic : '/images/default-user.png' %>" alt="User"> 
+  </a>
+</div>
+  <div class="info">
+    <h1>AI Topics Overview</h1>
+  </div>
+  <div class="card-container" id="cardContainer"></div>
+
+  <script src="../javascripts/list.js"> </script>
+</body>
+</html>
+

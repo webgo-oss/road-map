@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Dashboard</title>
+<link rel="stylesheet" href="../stylesheets/dashboard.css">
+</head>
+
+<body>
+  <div class="dashboard">
+
+    <div class="card focus">
+      <h3>Total Downloads</h3>
+      <p class="big-number"><%= totalDownloads %></p>
+    </div>
+
+    <div class="card tasks">
+      <h3>Learning More</h3>
+      <div class="task-links">
+        <a href="/form">Generate New AI Roadmap AND LEARN</a>
+        <a href="/about">ABOUT ME</a>
+        <a href="/form#feature">WHAT WE CAN MAKE</a>
+      </div>
+    </div>
+
+    <div class="card profile">
+      <h3>User Profile</h3>
+
+      <div class="profile-box">
+
+        <form class="profile-form" action="/update-profile" method="POST" enctype="multipart/form-data">
+
+          <input type="text" name="username" value="<%= user.username %>" required>
+
+          <div class="profile-img" id="profileImageBox">
+            <img id="profilePhoto" src="/uploads/<%= user.profile_pic || 'default.png' %>" alt="User">
+            <input type="file" id="photoInput" name="profile_pic" accept="image/*" style="display:none;">
+          </div>
+
+          <button type="submit">Update Profile</button>
+        </form>
+
+
+        <div class="profile-details">
+          <h4><%= user.username %></h4>
+          <p>Email: <%= user.email %></p>
+
+          <button class="logout-btn">
+            <a href="/logout" style="color:black; text-decoration:none;">Logout</a>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card invoices">
+      <h3>Total ROADMAPS</h3>
+      <p class="big-number"><%= totalOutputs %></p>
+    </div>
+
+    <div class="card effect">
+      <div class="effect-decor"></div>
+      <div class="effect-content">
+        <h3>SMART LEARNING ENGINE</h3>
+        <p>Our AI transforms your goals into step-by-step visual roadmaps,Graphs,Diagrams && Videos,making complex skills simple and achievable.</p>
+      </div>
+    </div>
+
+    <div class="history">
+      <div class="history-header">User History</div>
+
+      <div class="history-list">
+
+        <% if (history.length === 0) { %>
+
+          <div class="record" style="text-align:center;">
+            No history yet. Generate your first roadmap!
+          </div>
+
+        <% } else { %>
+
+          <% history.forEach(item => { %>
+
+            <div class="record">
+              <div class="record-date">
+                <%= new Date(item.created_at).toLocaleString() %>
+              </div>
+
+              <div class="record-content">
+                Prompt: "<%= item.prompt %>" <br>
+
+                <% if (item.pdf_file) { %>
+                  File: <em><%= item.pdf_file %></em>
+                <% } else { %>
+                  <span style="color:#999;">PDF is being generated...</span>
+                <% } %>
+              </div>
+
+              <div class="record-actions">
+                <% if (item.pdf_file) { %>
+                  <a class="view-btn" href="/<%= item.pdf_file %>" target="_blank">View</a>
+                  <a class="download-btn" href="/download/<%= item.id %>">Download</a>
+                <% } else { %>
+                  <button class="view-btn" disabled>Processing...</button>
+                <% } %>
+              </div>
+            </div>
+
+          <% }) %>
+
+        <% } %>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="../javascripts/profile-update.js" defer></script>
+</body>
+</html>

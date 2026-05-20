@@ -1,0 +1,73 @@
+
+#dashboard-fab {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+  will-change: transform;
+}
+
+/* Button container */
+.fab-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 5px;
+
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 999px;
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+
+/* Profile image */
+.fab-btn img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid rgba(255,255,255,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Username text */
+.fab-btn span {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+
+@media (max-width: 480px) {
+  .fab-btn {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .fab-btn span {
+    display: none; /* icon-only on mobile */
+  }
+
+  .fab-btn img {
+    width: 40px;
+    height: 40px;
+  }
+}
